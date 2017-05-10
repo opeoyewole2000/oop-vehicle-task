@@ -1,14 +1,14 @@
 class Car{
     
     
-    constructor(nameOfCar,model,typeOfCar){
+    constructor(name,model,typeOfCar){
       
       this.numOfDoors = 4;
       this.numOfWheels = 4;
       this.isSaloon = true;
       this.speed = "0 km/h";
       
-      if(nameOfCar === "Porshe" || nameOfCar === "Koenigsegg")
+      if(name === "Porshe" || name === "Koenigsegg")
       {
         this.numOfDoors = 2;
         
@@ -30,16 +30,16 @@ class Car{
         this.model = "GM"
         
       }
-       if(nameOfCar === undefined)
+       if(name === undefined)
       {
-        this.nameOfCar = "General"
+        this.name = "General"
         
       }
       else
       {
       this.typeOfCar = typeOfCar;
       this.model=model;
-      this.nameOfCar = nameOfCar;
+      this.name= name;
       
       }
       
@@ -67,7 +67,7 @@ class Car{
   }
 
 
-  let car1 = new Car('Koenigsegg', 'Agera R');
+  let car1 = new Car('Toyota', 'Corolla');
   let lorry = new Car("l","t","trailer");
   console.log(typeof(car1));
   car1.numOfDoors;
@@ -75,12 +75,14 @@ class Car{
  lorry.typeOfCar;
 
  car1.speed;
- lorry.speed;
+ /*lorry.speed;
  lorry.drive(7);
  lorry.speed;
  car1.drive(5);
- car1.speed;
+ car1.speed;*/
  
+ car1.name;
+ car1.model;
  
  
  exports.Car = Car;
